@@ -2,27 +2,23 @@ package dataStruct.array;
 
 import dataStruct.List;
 
-import java.util.ArrayList;
-
-import static com.sun.javafx.fxml.expression.Expression.add;
-
 /**
  * 自定义数组
  *
  * @author : Administrator
  * @create 2018-10-28 22:01
  */
-public class Array<E> implements List {
-    private Object[] data;
+public class Array<E> implements List<E> {
+    private E[] data;
     private int size;
 
     /**
      * 构造函数，传入数组的容量capacity构造Array
      *
-     * @param capacity
+     * @param capacity capacity
      */
     public Array(int capacity) {
-        data = new Object[capacity];
+        data = (E[]) new Object[capacity];
         size = 0;
     }
 
@@ -69,7 +65,7 @@ public class Array<E> implements List {
      * @param e int
      */
     @Override
-    public void addLast(Object e) {
+    public void addLast(E e) {
         insert(size, e);
     }
 
@@ -89,7 +85,7 @@ public class Array<E> implements List {
      * @param e     新元素e
      */
     @Override
-    public void insert(int index, Object e) {
+    public void insert(int index, E e) {
         if (size == data.length) {
             resize(2 * data.length);
         }

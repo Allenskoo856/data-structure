@@ -1,6 +1,5 @@
 package dataStruct;
 
-import java.util.ArrayList;
 
 /**
  * List接口
@@ -8,7 +7,7 @@ import java.util.ArrayList;
  * @author : Administrator
  * @create 2018-10-31 20:59
  */
-public interface List {
+public interface List<E> {
 
     int getSize();
 
@@ -16,9 +15,7 @@ public interface List {
 
     boolean isEmpty();
 
+    void addLast(E o);
 
-    void addLast(Object o);
-
-
-    void insert(int index, Object o);
+    void insert(int index, E o);
 }
