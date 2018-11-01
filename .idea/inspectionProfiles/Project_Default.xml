@@ -72,7 +72,7 @@
     <inspection_tool class="AlibabaThreadPoolCreation" enabled="true" level="BLOCKER" enabled_by_default="true" />
     <inspection_tool class="AlibabaThreadShouldSetName" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaTransactionMustHaveRollback" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaUndefineMagicConstant" enabled="true" level="MAJOR" enabled_by_default="true" />
+    <inspection_tool class="AlibabaUndefineMagicConstant" enabled="false" level="MAJOR" enabled_by_default="false" />
     <inspection_tool class="AlibabaUnsupportedExceptionWithModifyAsList" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaUseQuietReferenceNotation" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaUseRightCaseForDateFormat" enabled="false" level="CRITICAL" enabled_by_default="false" />

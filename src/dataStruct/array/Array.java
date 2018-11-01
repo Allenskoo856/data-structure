@@ -74,6 +74,7 @@ public class Array<E> implements List<E> {
      *
      * @param e int
      */
+    @Override
     public void addFirst(E e) {
         insert(0, e);
     }
@@ -103,9 +104,11 @@ public class Array<E> implements List<E> {
 
     /**
      * 获取index索引位置的元素
-     * @param index  索引
+     *
+     * @param index 索引
      * @return E[data]
      */
+    @Override
     public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
@@ -113,7 +116,97 @@ public class Array<E> implements List<E> {
         return (E) data[index];
     }
 
+    /**
+     * Get last element
+     *
+     * @return E
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
 
+    /**
+     * get getFirst
+     *
+     * @return E
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+
+    @Override
+    public void replace(int index, E e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Set failed. Index is illegal.");
+        }
+        data[index] = e;
+    }
+
+    @Override
+    public boolean contains(E e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i].equals(e)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int indexOf(E e) {
+        for (int i = 0; i < size; i++) {
+            if (data[i].equals(e)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Remove failed. Index is illegal.");
+        }
+
+        E ret = data[index];
+        for (int i = index + 1; i < size; i++) {
+            data[i - 1] = data[i];
+        }
+        size--;
+        data[size] = null;
+
+        if (size == data.length / 4 && data.length / 2 != 0) {
+            resize(data.length / 2);
+        }
+        return ret;
+    }
+
+    @Override
+    public void removeElement(E e) {
+        int index = indexOf(e);
+        if (index != -1) {
+            remove(index);
+        }
+    }
+
+    /**
+     * 从数组中删除第一个元素, 返回删除的元素
+     *
+     * @return E
+     */
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    /**
+     * 从数组中删除最后一个元素, 返回删除的元素
+     *
+     * @return E
+     */
+    public E removeLast() {
+        return remove(size - 1);
+    }
 
     /**
      * 将数组空间的容量变成newCapacity大小
