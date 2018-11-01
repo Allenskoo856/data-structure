@@ -1,6 +1,7 @@
-package dataStruct.array;
+package dataStruct.stack;
 
 import dataStruct.Stack;
+import dataStruct.array.Array;
 
 /**
  * @author : Administrator

@@ -106,7 +106,6 @@ public class LinkedList<E> implements List<E> {
         return (E) cur.e;
     }
 
-
     public E getFirst() {
         return get(0);
     }
