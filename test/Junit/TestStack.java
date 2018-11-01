@@ -43,7 +43,7 @@ public class TestStack {
 
     @Test
     public void testArrayAndLinkedListStack() {
-        int opCount = 100000;
+        int opCount = 1000000;
 
         ArrayStack<Integer> arrayStack = new ArrayStack<>();
         double time1 = testStack(arrayStack, opCount);
