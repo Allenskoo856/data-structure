@@ -5,8 +5,8 @@ package dataStruct.linkedList;
  * @create 2018-11-01 17:37
  */
 public class Node<E> {
-    private E e;
-    private Node next;
+    protected E e;
+    protected Node next;
 
     public Node(E e, Node next) {
         this.e = e;

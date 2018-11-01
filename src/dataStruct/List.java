@@ -11,8 +11,6 @@ public interface List<E> {
 
     int getSize();
 
-    int getCapacity();
-
     boolean isEmpty();
 
     boolean contains(E e);

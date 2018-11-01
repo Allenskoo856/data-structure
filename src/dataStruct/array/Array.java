@@ -34,7 +34,6 @@ public class Array<E> implements List<E> {
      *
      * @return length
      */
-    @Override
     public int getCapacity() {
         return data.length;
     }
