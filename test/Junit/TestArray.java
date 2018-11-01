@@ -1,6 +1,7 @@
 package Junit;
 
 import dataStruct.array.Array;
+import dataStruct.queue.ArrayQueue;
 import org.junit.Test;
 
 /**
@@ -11,7 +12,7 @@ public class TestArray {
 
     @Test
     public void testArray() {
-        Array az = new Array(5);
+        Array<Integer> az = new Array<>(5);
         az.addLast(12);
         az.addLast(14);
         az.addLast(15);
@@ -31,4 +32,16 @@ public class TestArray {
     }
 
 
+    @Test
+    public void testArrayStack() {
+        ArrayQueue<Integer> quene = new ArrayQueue<>();
+        for (int i = 0; i < 10; i++) {
+            quene.enqueue(i);
+            System.out.println(quene);
+            if (i % 3 == 2) {
+                quene.dequeue();
+                System.out.println(quene);
+            }
+        }
+    }
 }
