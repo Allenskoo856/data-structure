@@ -207,11 +207,13 @@ public class Array<E> implements List<E> {
         return remove(size - 1);
     }
 
+
     /**
      * 将数组空间的容量变成newCapacity大小
      *
      * @param newCapacity newCapacity
      */
+    @SuppressWarnings("unchecked")
     private void resize(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
         if (size >= 0) {
