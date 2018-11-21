@@ -59,8 +59,9 @@ public class BinarySearchTree<E extends Comparable<E>> {
         if (e.compareTo(node.e) == 0) {
             return true;
         } else if (e.compareTo(node.e) < 0) {
-
+            return false;
         }
+        return false;
     }
 
 }
