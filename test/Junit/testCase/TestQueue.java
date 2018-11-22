@@ -1,4 +1,4 @@
-package Junit;
+package Junit.testCase;
 
 import dataStruct.queue.LinkedListQueue;
 import org.junit.Test;

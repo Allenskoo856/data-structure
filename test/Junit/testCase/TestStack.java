@@ -1,4 +1,4 @@
-package Junit;
+package Junit.testCase;
 
 import dataStruct.Stack;
 import dataStruct.stack.ArrayStack;

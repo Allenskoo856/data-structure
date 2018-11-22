@@ -1,5 +1,6 @@
-package Junit;
+package Junit.testCase;
 
+import Junit.Student;
 import dataStruct.array.Array;
 import dataStruct.queue.ArrayQueue;
 import org.junit.Test;
