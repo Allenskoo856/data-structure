@@ -22,6 +22,7 @@ public class TestBST {
         /*System.out.println(bst);*/
         bst.inOrder();
         System.out.println();
+        bst.levelOrder();
 
     }
 }

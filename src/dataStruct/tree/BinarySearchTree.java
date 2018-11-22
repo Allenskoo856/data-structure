@@ -1,6 +1,8 @@
 package dataStruct.tree;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -122,6 +124,24 @@ public class BinarySearchTree<E extends Comparable<E>> {
             }
             if (current.left != null) {
                 stack.push(current.left);
+            }
+        }
+    }
+
+    /**
+     * 层序遍历---的方法
+     */
+    public void levelOrder() {
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node cur = q.remove();
+            System.out.println(cur.e);
+            if (cur.left != null) {
+                q.add(cur.left);
+            }
+            if (cur.right != null) {
+                q.add(cur.right);
             }
         }
     }
