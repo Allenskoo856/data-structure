@@ -36,7 +36,7 @@
     <inspection_tool class="AlibabaAvoidConcurrentCompetitionRandom" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaAvoidManuallyCreateThread" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaAvoidMissUseOfMathRandom" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaAvoidNegationOperator" enabled="false" level="MAJOR" enabled_by_default="false" />
+    <inspection_tool class="AlibabaAvoidNegationOperator" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaAvoidNewDateGetTime" enabled="true" level="BLOCKER" enabled_by_default="true" />
     <inspection_tool class="AlibabaAvoidPatternCompileInMethod" enabled="true" level="BLOCKER" enabled_by_default="true" />
     <inspection_tool class="AlibabaAvoidReturnInFinally" enabled="true" level="CRITICAL" enabled_by_default="true" />
@@ -58,12 +58,12 @@
     <inspection_tool class="AlibabaIbatisMethodQueryForList" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaLowerCamelCaseVariableNaming" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaMethodReturnWrapperType" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaMethodTooLong" enabled="false" level="MAJOR" enabled_by_default="false" />
+    <inspection_tool class="AlibabaMethodTooLong" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaPackageNaming" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaPojoMustOverrideToString" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaPojoMustUsePrimitiveField" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaPojoNoDefaultValue" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaRemoveCommentedCode" enabled="true" level="MAJOR" enabled_by_default="true" />
+    <inspection_tool class="AlibabaRemoveCommentedCode" enabled="true" level="INFORMATION" enabled_by_default="true" />
     <inspection_tool class="AlibabaServiceOrDaoClassShouldEndWithImpl" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaStringConcat" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaSwitchStatement" enabled="true" level="CRITICAL" enabled_by_default="true" />
@@ -72,10 +72,10 @@
     <inspection_tool class="AlibabaThreadPoolCreation" enabled="true" level="BLOCKER" enabled_by_default="true" />
     <inspection_tool class="AlibabaThreadShouldSetName" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaTransactionMustHaveRollback" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaUndefineMagicConstant" enabled="false" level="MAJOR" enabled_by_default="false" />
+    <inspection_tool class="AlibabaUndefineMagicConstant" enabled="true" level="MAJOR" enabled_by_default="true" />
     <inspection_tool class="AlibabaUnsupportedExceptionWithModifyAsList" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlibabaUseQuietReferenceNotation" enabled="true" level="MAJOR" enabled_by_default="true" />
-    <inspection_tool class="AlibabaUseRightCaseForDateFormat" enabled="false" level="CRITICAL" enabled_by_default="false" />
+    <inspection_tool class="AlibabaUseRightCaseForDateFormat" enabled="true" level="CRITICAL" enabled_by_default="true" />
     <inspection_tool class="AlphaUnsortedPropertiesFile" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="AmbiguousFieldAccess" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="AmbiguousMethodCall" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -2237,8 +2237,8 @@
     <inspection_tool class="WaitOrAwaitWithoutTimeout" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="WaitWhileHoldingTwoLocks" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="WaitWithoutCorrespondingNotify" enabled="false" level="WARNING" enabled_by_default="false" />
-    <inspection_tool class="WeakerAccess" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="true" />
+    <inspection_tool class="WeakerAccess" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="false" />
       <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="true" />
       <option name="SUGGEST_PRIVATE_FOR_INNERS" value="false" />
     </inspection_tool>
