@@ -29,6 +29,14 @@ public class Array<E> implements List<E> {
         this(10);
     }
 
+    public Array(E[] arr){
+        data = (E[])new Object[arr.length];
+        if (arr.length >= 0) {
+            System.arraycopy(arr, 0, data, 0, arr.length);
+        }
+        size = arr.length;
+    }
+
     /**
      * 获取数组的容量
      *
