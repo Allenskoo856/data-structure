@@ -102,7 +102,7 @@ public class Array<E> implements List<E> {
             throw new ArrayIndexOutOfBoundsException("out of boundary");
         }
 
-        for (int i = size - 1; i >= size; i++) {
+        for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
         }
         data[index] = e;
@@ -170,6 +170,12 @@ public class Array<E> implements List<E> {
         return -1;
     }
 
+    /**
+     * 删除元素的值
+     *
+     * @param index  索引
+     * @return       返回待删除元素的值
+     */
     @Override
     public E remove(int index) {
         if (index < 0 || index >= size) {
