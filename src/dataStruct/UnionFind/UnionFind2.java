@@ -29,7 +29,6 @@ public class UnionFind2 implements UF {
     public void unionElements(int p, int q) {
         int pRoot = find(p);
         int qRoot = find(q);
-
         if (pRoot == qRoot) {
             return;
         }
@@ -37,7 +36,8 @@ public class UnionFind2 implements UF {
         parent[pRoot] = qRoot;
     }
 
-    private int find(int p) {
+    @Override
+    public int find(int p) {
         if (p < 0 || p >= parent.length) {
             throw new IllegalArgumentException("p is out of bound");
         }

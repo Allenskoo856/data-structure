@@ -16,3 +16,5 @@ gen### Java template
 *.rar
 hs_err_pid*
 
+src/algorithms/
+src/dataStruct/graph/

@@ -47,7 +47,8 @@ public class UnionFind3 implements UF {
         }
     }
 
-    private int find(int p) {
+    @Override
+    public int find(int p) {
         if (p < 0 || p >= parent.length) {
             throw new IllegalArgumentException("p is out of bound");
         }

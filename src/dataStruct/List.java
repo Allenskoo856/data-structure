@@ -1,6 +1,5 @@
 package dataStruct;
 
-
 /**
  * List接口
  *
