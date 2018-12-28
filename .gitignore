@@ -2,7 +2,7 @@
 .idea
 *.iml
 out
-gen### Java template
+### Java template
 *.class
 *.log
 *.ctxt
@@ -16,5 +16,3 @@ gen### Java template
 *.rar
 hs_err_pid*
 
-src/algorithms/
-src/dataStruct/graph/
