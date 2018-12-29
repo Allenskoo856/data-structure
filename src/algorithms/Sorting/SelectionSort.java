@@ -38,8 +38,6 @@ public class SelectionSort extends sorts {
         }
     }
 
-    ;
-
     /**
      * Exercise 2.1.18
      *
