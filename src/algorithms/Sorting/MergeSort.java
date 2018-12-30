@@ -2,9 +2,17 @@ package algorithms.Sorting;
 
 import algorithms.Sorting.lib.SortTestHelper;
 
-/**
+/*
  * @author : Administrator
  * @create 2018-12-29 21:34
+ */
+
+/**
+ * -------自顶向下归并排序MergeSort----------------------------------------
+ *  归并排序是使用分治算法的一个典型的排序算法，其主要思想是在于每次都使用二分法将整个大数组划分为两个子数组
+ *  逐渐递归的调用这些sort排序算法，通过merge函数来合并这些子数组。
+ *  merge函数的主要思想是，建立一个大小为N的aux【】辅助数组，数组里面存放两个排序函数之后的作用。
+ *  其时间复杂度为O（nlogn）具体分析参见<<算法第四版>>
  */
 public class MergeSort extends sorts {
 
