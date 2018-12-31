@@ -11,30 +11,39 @@ import java.awt.*;
  * @author : Administrator
  * @create 2018-12-28 21:52
  */
-public class InsertionSort extends sorts{
+public class InsertionSort extends sorts {
 
     /**
      * --------插入排序-----------------------------------------
-     *  插入排序思想，将设定i指针左边的为排序完成，右边的为未排序，j作为内层指针，
-     *  每次循环比较前面的元素，若小则向前移动，否则不变。
-     *  分析： 外循环最少要走 N - 1次，内循环时间为看数组而定。
-     *  最好的情况：已经有序的数组，仅需要N-1次比较即可
-     *  最坏的情况：完全逆序的数组，需要~1/2N^2比较-~1/2N^2次交换
-     *  其时间复杂度为o(n^2)
+     * 插入排序思想，将设定i指针左边的为排序完成，右边的为未排序，j作为内层指针，
+     * 每次循环比较前面的元素，若小则向前移动，否则不变。
+     * 分析： 外循环最少要走 N - 1次，内循环时间为看数组而定。
+     * 最好的情况：已经有序的数组，仅需要N-1次比较即可
+     * 最坏的情况：完全逆序的数组，需要~1/2N^2比较-~1/2N^2次交换
+     * 其时间复杂度为o(n^2)
      *
-     * @param a    arr[]
+     * @param a arr[]
      */
-    public static void sort(Comparable[] a){
+    public static void sort(Comparable[] a) {
         int N = a.length;
         for (int i = 1; i < N; i++) {
-            for (int j = i; j > 0 && less(a[j],a[j -1]); j--) {
-                swich(a, j, j -1);
+            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
+                swich(a, j, j - 1);
+            }
+        }
+    }
+
+    public static void sort(Comparable[] a, int lo, int hi) {
+        for (int i = lo + 1; i <= hi; i++) {
+            for (int j = i; j >lo && less(a[j],a[j -1]) ; j--) {
+                swich(a, j ,j -1);
             }
         }
     }
 
     /**
-     *  Exercise 2.1.18
+     * Exercise 2.1.18
+     *
      * @param a []
      */
     public static void drawSort(Comparable[] a) {
@@ -80,7 +89,7 @@ public class InsertionSort extends sorts{
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100);
         Integer[] arr1 = SortTestHelper.generateNearlyOrderedArray(N, 150);
         SortTestHelper.testSort("algorithms.Sorting.InsertionSort", arr);
-        SortTestHelper.testSort("algorithms.Sorting.InsertionSort",arr1);
+        SortTestHelper.testSort("algorithms.Sorting.InsertionSort", arr1);
 
         InsertionSort.drawSort(arr);
     }
