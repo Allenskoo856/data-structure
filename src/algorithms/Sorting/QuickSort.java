@@ -16,6 +16,7 @@ public class QuickSort extends sorts {
 
     protected static void sort(Comparable[] a, int lo, int hi) {
         // 小数据采用插入排序，优化效率
+        if (lo > hi) return;
         if (hi <= lo + 15) { InsertionSort.sort(a, lo, hi);return;};
         int j = partition(a, lo, hi);   // 快速排序的切分功能
         sort(a, lo, j - 1);

@@ -27,12 +27,13 @@ public class QuickSort2Way extends sorts{
         // 随机在arr[lo...hi]的范围中, 选择一个数值作为标定点pivot
         swich(a, lo, (int) (Math.random() * (hi - lo + 1)) + lo);
         Comparable p = a[lo];
-        int i = lo, j = hi + 1;
+        int i = lo + 1, j = hi;
         while (true){
-            while (less(a[++i],p)) if (i == hi) break;
-            while (less(p,a[--j])) if (j == lo) break;
+            while (less(a[i],p) && i <= hi) i++;
+            while (less(p,a[j]) && j >= lo + 1)  j--;
             if (i >= j) break;
             swich(a, i, j);
+            i++; j--;
         }
         swich(a, lo, j);
         return j;
@@ -42,7 +43,8 @@ public class QuickSort2Way extends sorts{
         // 双路快速排序算法也是一个O(nlogn)复杂度的算法
         // 可以在1秒之内轻松处理100万数量级的数据
         int N = 1000000;
-        Integer[] arr = SortTestHelper.generateNearlyOrderedArray(N, 50);
+        Integer[] arr = SortTestHelper.generateRandomArray(N, 0,  20);
         SortTestHelper.testSort("algorithms.Sorting.QuickSort2Way", arr);
+        SortTestHelper.testSort("algorithms.Sorting.QuickSort", arr);
     }
 }
